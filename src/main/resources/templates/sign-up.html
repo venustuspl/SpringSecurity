@@ -6,11 +6,12 @@
 </head>
 <body>
 <h1>Register</h1>
-<form th:action=@"/register">
+<form method="post" th:action=@"/{register}">
     Login:
-    <input type="text">
-
-
+    <input name="username" type="text">
+    Password:
+    <input name="password" type="text">
+    <input type="submit" value="sign up!">
 </form>
 </body>
 </html>
