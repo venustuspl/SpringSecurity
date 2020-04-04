@@ -13,6 +13,13 @@ public class Start {
         appUser.setPassword(passwordEncoder.encode("Janusz123"));
         appUser.setRole("ROLE_ADMIN");
         appUserRepo.save(appUser);
+
+        AppUser appUserMaciek = new AppUser();
+        appUserMaciek.setUsername("Maciek");
+        appUserMaciek.setPassword(passwordEncoder.encode("Maciek123"));
+        appUserMaciek.setRole("ROLE_USER");
+        appUserRepo.save(appUserMaciek);
+
     }
 
 
