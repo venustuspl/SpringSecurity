@@ -33,8 +33,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http.headers().disable();
         http.authorizeRequests()
                 .antMatchers("/hello").authenticated()
-                .antMatchers("/for-admin").hasRole("ADMIN")
-                .antMatchers("/for-user").hasRole("USER")
 
 
                 .and()

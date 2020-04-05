@@ -4,36 +4,43 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.security.Principal;
 
 @Controller
 public class UserController {
 
+    UserService userService;
+
+//    for restvalue
+//    @GetMapping("/hello")
+//    @ResponseBody
+//    public String hello() {
+//        return "hello";
+//    }
+
+//    @GetMapping("/for-admin")
+//    public String forAdmin() {
+//        return "hello-admin";
+//    }
+
     @GetMapping("/hello")
-    @ResponseBody
-    public String hello() {
+    public String hello(Principal principal, Model model) {
+        model.addAttribute("name", principal.getName());
         return "hello";
     }
 
-    @GetMapping("/for-admin")
-    public String forAdmin() {
-        return "hello-admin";
-    }
-
-    @GetMapping("/for-user")
-    public String forUser() {
-        return "hello-user";
-    }
-
     @GetMapping("/sign-up")
-    public String signUp(Model model) {
+    public String signup(Model model) {
         model.addAttribute("user", new AppUser());
         return "sign-up";
     }
 
     @PostMapping("/register")
     public String register(AppUser appUser) {
-        System.out.println(appUser);
+        userService.addUser(appUser);
         return "sign-up";
     }
+
+
 }
