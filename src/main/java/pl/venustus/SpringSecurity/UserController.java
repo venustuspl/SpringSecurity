@@ -1,11 +1,14 @@
 package pl.venustus.SpringSecurity;
 
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import java.security.Principal;
+import java.util.Collection;
 
 @Controller
 public class UserController {
@@ -27,6 +30,10 @@ public class UserController {
     @GetMapping("/hello")
     public String hello(Principal principal, Model model) {
         model.addAttribute("name", principal.getName());
+        Collection<? extends GrantedAuthority> authorities = SecurityContextHolder.getContext().getAuthentication().getAuthorities();
+        model.addAttribute("authorities", authorities);
+        Object details = SecurityContextHolder.getContext().getAuthentication().getDetails();
+        model.addAttribute("details", details);
         return "hello";
     }
 
