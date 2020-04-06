@@ -1,4 +1,4 @@
-package pl.venustus.SpringSecurity;
+package pl.venustus.SpringSecurity.Controller;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -6,6 +6,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import pl.venustus.SpringSecurity.Model.AppUser;
+import pl.venustus.SpringSecurity.Service.UserService;
 
 import java.security.Principal;
 import java.util.Collection;

@@ -2,6 +2,8 @@ package pl.venustus.SpringSecurity;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import pl.venustus.SpringSecurity.Model.AppUser;
+import pl.venustus.SpringSecurity.Repo.AppUserRepo;
 
 @Configuration
 public class Start {

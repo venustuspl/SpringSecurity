@@ -1,9 +1,10 @@
-package pl.venustus.SpringSecurity;
+package pl.venustus.SpringSecurity.Service;
 
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
+import pl.venustus.SpringSecurity.Repo.AppUserRepo;
 
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {

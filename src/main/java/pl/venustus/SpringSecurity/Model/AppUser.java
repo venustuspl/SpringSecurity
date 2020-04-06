@@ -1,4 +1,4 @@
-package pl.venustus.SpringSecurity;
+package pl.venustus.SpringSecurity.Model;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

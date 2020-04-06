@@ -1,7 +1,9 @@
-package pl.venustus.SpringSecurity;
+package pl.venustus.SpringSecurity.Service;
 
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import pl.venustus.SpringSecurity.Model.AppUser;
+import pl.venustus.SpringSecurity.Repo.AppUserRepo;
 
 @Service
 public class UserService {

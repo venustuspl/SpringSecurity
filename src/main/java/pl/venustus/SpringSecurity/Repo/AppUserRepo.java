@@ -1,7 +1,8 @@
-package pl.venustus.SpringSecurity;
+package pl.venustus.SpringSecurity.Repo;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+import pl.venustus.SpringSecurity.Model.AppUser;
 
 import java.util.Optional;
 
