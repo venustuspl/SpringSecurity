@@ -11,6 +11,7 @@ import pl.venustus.SpringSecurity.Service.UserService;
 
 import java.security.Principal;
 import java.util.Collection;
+import java.util.UUID;
 
 @Controller
 public class UserController {
@@ -51,5 +52,9 @@ public class UserController {
         return "sign-up";
     }
 
+    private void sendToken() {
+        String token = UUID.randomUUID().toString();
 
+
+    }
 }

@@ -20,6 +20,11 @@ public class AppUser implements UserDetails {
     private String username;
     private String password;
     private String role;
+    private boolean isEnabled;
+
+    public void setEnabled(boolean enabled) {
+        isEnabled = enabled;
+    }
 
     public AppUser() {
     }
