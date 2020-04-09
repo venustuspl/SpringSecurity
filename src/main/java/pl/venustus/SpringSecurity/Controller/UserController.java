@@ -80,7 +80,7 @@ public class UserController {
         AppUser appUser = byValue.getAppUser();
         appUser.setEnabled(true);
         appUserRepo.save(appUser);
-        return "sign-up";
+        return "hello";
     }
 
 }
